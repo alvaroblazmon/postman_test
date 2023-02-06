@@ -1,0 +1,2668 @@
+{
+	"info": {
+		"_postman_id": "b45d83ed-9631-4d5b-a7b5-69725176fe64",
+		"name": "Bolt VTC PRO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "17396120-b45d83ed-9631-4d5b-a7b5-69725176fe64"
+	},
+	"item": [
+		{
+			"name": "reseller",
+			"item": [
+				{
+					"name": "v1/rides",
+					"item": [
+						{
+							"name": "scheduled",
+							"item": [
+								{
+									"name": "Rides Scheduled",
+									"id": "8cd1a98d-61f2-4c53-8173-578a66e1121d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"vehicle_category_id\": \"2556\",\n    \"fare_id\": \"AAAJ_DE2NTYzMzk2MDI3MzkzNzctRmJJcXpHNXV5T2I4VnRSSi1idXNpbmVzcw\",\n    \"user\": {\n        \"phone\": \"+525575250861\",\n        \"name\": \"veniam\"\n    },\n    \"stops\": [\n        {\n            \"lat\": 37.38421,\n            \"lng\": -5.97219\n        },\n        {\n            \"lat\": 37.37769,\n            \"lng\": -5.98263\n        }\n    ],\n    \"arrive_at_client_time\": \"2022-06-28T19:10:00.000Z\",\n    \"note_to_driver\": \"aliqua Ut Excepteur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/scheduled",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"scheduled"
+											]
+										},
+										"description": "When the order is scheduled successfully, the ride_id is returned."
+									},
+									"response": [
+										{
+											"id": "2d61f9fa-a237-47e9-afbb-cc1609a06fbe",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"vehicle_category_id\": -54381266.87075146,\n  \"user\": {\n    \"phone\": \"in est\",\n    \"name\": \"in velit sit labore\"\n  },\n  \"stops\": [\n    {\n      \"lat\": 90843800.11219662,\n      \"lng\": 29412270.485569447\n    },\n    {\n      \"lat\": 55748396.223566085,\n      \"lng\": 83225960.56979501\n    }\n  ],\n  \"arrive_at_client_time\": \"irure velit aute\",\n  \"note_to_driver\": \"ut\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/scheduled",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"scheduled"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"ride_id\": -39591541.70173913\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Scheduled Get",
+									"id": "e99562a6-f3e2-4328-8fba-f07225f0ea4a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/scheduled?ride_id=1563675",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"scheduled"
+											],
+											"query": [
+												{
+													"key": "ride_id",
+													"value": "1563675",
+													"description": "(Required) The id of the ride"
+												}
+											]
+										},
+										"description": "Get the details for the scheduled ride.\n\nWhen the ride is converted to on-demand, this endpoint will start returning 404.\n\nNot intended for frequent polling."
+									},
+									"response": [
+										{
+											"id": "dcbb2870-2cda-485b-a704-68dc98c3588f",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/scheduled?ride_id=51328934.21222687",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"scheduled"
+													],
+													"query": [
+														{
+															"key": "ride_id",
+															"value": "51328934.21222687"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"ride_id\": 7308703.5794698,\n  \"created\": \"quis in dolor fugiat\",\n  \"stops\": [\n    {\n      \"lat\": -42982521.13435752,\n      \"lng\": -63158549.93939487\n    },\n    {\n      \"lat\": -22819949.555610284,\n      \"lng\": 66569313.25613761\n    }\n  ],\n  \"user\": {\n    \"phone\": \"Du\",\n    \"name\": \"et sunt ad culpa mollit\"\n  },\n  \"arrive_at_client_time\": \"ullamco\",\n  \"state\": \"CANCELLED\",\n  \"vehicle_category\": \"isolated\",\n  \"note_to_driver\": \"cillum officia quis ipsum\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Scheduled Estimations",
+									"id": "4f0613c1-9db6-4766-8366-dfd96c3ea93c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"stops\": [\n        {\n            \"lat\": 37.38421,\n            \"lng\": -5.97219\n        },\n        {\n            \"lat\": 37.37769,\n            \"lng\": -5.98263\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/scheduled/estimations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"scheduled",
+												"estimations"
+											]
+										},
+										"description": "Returns an array of estimations for different categories. One of the `vehicle_category_id` of the categories should be provided when creating the scheduled order in order for the price to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nAll the categories available for the city will be returned; however, you will not have ETA information, unlike on demand estimations."
+									},
+									"response": [
+										{
+											"id": "2b87e5b4-2130-4b3e-ae55-b927242359e7",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 16156204.944783866,\n      \"lng\": -37006958.71907849\n    },\n    {\n      \"lat\": -78756837.99668294,\n      \"lng\": 41633817.54110661\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/scheduled/estimations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"scheduled",
+														"estimations"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"estimations\": [\n    {\n      \"vehicle_category_id\": 72148827.29111657,\n      \"vehicle_category\": \"motorbike\",\n      \"seats\": -97254147.75950156,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"vehicle_category_id\": 162936.07148894668,\n      \"vehicle_category\": \"taxi\",\n      \"seats\": 76717595.00964198,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Scheduled Cancel",
+									"id": "d8b57108-8513-4aea-8303-d84b15c1c82d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ride_id\": 1562138\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/scheduled/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"scheduled",
+												"cancel"
+											]
+										},
+										"description": "The response will be empty in case of a successful cancellation."
+									},
+									"response": [
+										{
+											"id": "84195674-3123-4823-8f6e-1620e2492e77",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"ride_id\": 43999194.58587909\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/scheduled/cancel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"scheduled",
+														"cancel"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								},
+								{
+									"name": "Rides Scheduled History",
+									"id": "60fbd97f-d5f6-44cb-9b8e-1593d0179d05",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/scheduled/history",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"scheduled",
+												"history"
+											]
+										},
+										"description": "Returns the list of all scheduled rides that were not yet handled, made by the API client, sorted ascending by the `arrive_at_client_time`.\n\nThe response is paginated."
+									},
+									"response": [
+										{
+											"id": "241fec7f-ed63-4195-83dc-c63712e486d6",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/scheduled/history?page=-34079786.421699554&items_per_page=42669226.44519231",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"scheduled",
+														"history"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "-34079786.421699554"
+														},
+														{
+															"key": "items_per_page",
+															"value": "42669226.44519231"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"scheduled_rides\": [\n    {\n      \"ride_id\": -39254409.29996431,\n      \"created\": \"velit nisi quis\",\n      \"vehicle_category\": \"comfort\",\n      \"state\": \"SCHEDULED\",\n      \"user\": {\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"arrive_at_client_time\": \"eiusmod irure\"\n    },\n    {\n      \"ride_id\": -5620749.391691551,\n      \"created\": \"nostrud anim aute ad\",\n      \"vehicle_category\": \"marketing\",\n      \"state\": \"CANCELLED\",\n      \"user\": {\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"arrive_at_client_time\": \"eu officia ea incididunt\"\n    }\n  ],\n  \"pagination\": {\n    \"total_items\": -46475671.14983495,\n    \"total_pages\": 85709089.07003155,\n    \"items_per_page\": -52530948.00499998,\n    \"current_page\": -36256016.69862166\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Scheduled Dispatch",
+									"id": "6c837756-aa5e-40ab-bb6e-ba47e447130f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ride_id\": 1001\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/scheduled/control/dispatch?uuid={{uuid}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"sandbox",
+												"rides",
+												"scheduled",
+												"control",
+												"dispatch"
+											],
+											"query": [
+												{
+													"key": "ride_id",
+													"value": "1001",
+													"description": "(Required) The id of the ride",
+													"disabled": true
+												},
+												{
+													"key": "uuid",
+													"value": "{{uuid}}"
+												}
+											]
+										},
+										"description": "Get the details for the scheduled ride.\n\nWhen the ride is converted to on-demand, this endpoint will start returning 404.\n\nNot intended for frequent polling."
+									},
+									"response": [
+										{
+											"id": "92faf956-dd3b-4bb7-934e-6629e411bb80",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/scheduled?ride_id=51328934.21222687",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"scheduled"
+													],
+													"query": [
+														{
+															"key": "ride_id",
+															"value": "51328934.21222687"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"ride_id\": 7308703.5794698,\n  \"created\": \"quis in dolor fugiat\",\n  \"stops\": [\n    {\n      \"lat\": -42982521.13435752,\n      \"lng\": -63158549.93939487\n    },\n    {\n      \"lat\": -22819949.555610284,\n      \"lng\": 66569313.25613761\n    }\n  ],\n  \"user\": {\n    \"phone\": \"Du\",\n    \"name\": \"et sunt ad culpa mollit\"\n  },\n  \"arrive_at_client_time\": \"ullamco\",\n  \"state\": \"CANCELLED\",\n  \"vehicle_category\": \"isolated\",\n  \"note_to_driver\": \"cillum officia quis ipsum\"\n}"
+										}
+									]
+								}
+							],
+							"id": "c1bc2e14-f6b6-4531-8203-ae5c207ac54c"
+						},
+						{
+							"name": "flexible",
+							"item": [
+								{
+									"name": "Rides Flexible",
+									"id": "5c68f83e-508f-48d8-9748-42dd94b4603e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"vehicle_category_id\": 2556,\n    \"user\": {\n        \"phone\": \"culpa reprehenderit in\",\n        \"name\": \"labore esse\"\n    },\n    \"stops\": [\n        {\n            \"lat\": 37.38421,\n            \"lng\": -5.97219\n        },\n        {\n            \"lat\": 37.37769,\n            \"lng\": -5.98263\n        }\n    ],\n    \"note_to_driver\": \"do sit\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/flexible",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"flexible"
+											]
+										},
+										"description": "When the flexible order is created successfully, the ride_id, the request_url to be used for creating an on-demand ride and the expiry time for the URL are returned."
+									},
+									"response": [
+										{
+											"id": "5688432f-cd22-45fd-acbd-677363bedce8",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"vehicle_category_id\": 62467979.87065703,\n  \"user\": {\n    \"phone\": \"veniam et in\",\n    \"name\": \"non ea consectetur\"\n  },\n  \"stops\": [\n    {\n      \"lat\": -2559670.006756276,\n      \"lng\": -75626537.56664509\n    },\n    {\n      \"lat\": -77253661.00403868,\n      \"lng\": 14732142.175485581\n    }\n  ],\n  \"note_to_driver\": \"sit nulla tempor\",\n  \"ready_for_dispatch_at\": \"labore e\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/flexible",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"flexible"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"ride_id\": -3596549.215130776,\n  \"ride_request\": {\n    \"url\": \"et enim\",\n    \"expires_at\": \"commodo eiusmod dolor eu et\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Flexible Get",
+									"id": "2f437af6-007b-45a7-8547-ed1b17d843f4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/flexible?ride_id=51328934.21222687",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"flexible"
+											],
+											"query": [
+												{
+													"key": "ride_id",
+													"value": "51328934.21222687",
+													"description": "(Required) The id of the ride"
+												}
+											]
+										},
+										"description": "Get the details for the flexible ride.\n\nWhen the ride is converted to on-demand, this endpoint will start returning 404.\n\nNot intended for frequent polling."
+									},
+									"response": [
+										{
+											"id": "4ad1f719-9ac1-4a25-a76b-24d83269ce7d",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/flexible?ride_id=51328934.21222687",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"flexible"
+													],
+													"query": [
+														{
+															"key": "ride_id",
+															"value": "51328934.21222687"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"ride_id\": 31504389.610159576,\n  \"created\": \"irure ullamco \",\n  \"stops\": [\n    {\n      \"lat\": 67316841.56309798,\n      \"lng\": 49790679.320563406\n    },\n    {\n      \"lat\": -76263583.7403776,\n      \"lng\": -56092216.98070459\n    }\n  ],\n  \"user\": {\n    \"phone\": \"fugiat aliquip et est Lorem\",\n    \"name\": \"et enim fugiat irure velit\"\n  },\n  \"ready_for_dispatch_at\": \"esse eiusmod ut\",\n  \"expires_at\": \"nostrud\",\n  \"state\": \"OTHER\",\n  \"vehicle_category\": \"custom\",\n  \"request_url\": \"consequat ad magna fugiat\",\n  \"note_to_driver\": \"eu\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Flexible Estimations",
+									"id": "8559a7f6-30d5-454c-bd7e-cee710102eed",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"stops\": [\n        {\n            \"lat\": 37.38421,\n            \"lng\": -5.97219\n        },\n        {\n            \"lat\": 37.37769,\n            \"lng\": -5.98263\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/flexible/estimations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"flexible",
+												"estimations"
+											]
+										},
+										"description": "Returns an array of estimations for different categories. One of the `vehicle_category_id` of the categories should be provided when creating the flexible order in order for the price to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nAll the categories available for the city will be returned; however, you will not have ETA information, unlike on demand estimations."
+									},
+									"response": [
+										{
+											"id": "547d3391-528c-4f09-b2fc-da22243ab058",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 16156204.944783866,\n      \"lng\": -37006958.71907849\n    },\n    {\n      \"lat\": -78756837.99668294,\n      \"lng\": 41633817.54110661\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/flexible/estimations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"flexible",
+														"estimations"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"estimations\": [\n    {\n      \"vehicle_category_id\": 11693837.444241777,\n      \"vehicle_category\": \"autorickshaw\",\n      \"seats\": 28568057.38668573,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"vehicle_category_id\": -58333040.90591227,\n      \"vehicle_category\": \"other\",\n      \"seats\": -85217650.80133355,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Rides Flexible Cancel",
+									"id": "69457ef7-718e-4a3f-89da-bb5528f93d4b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ride_id\": -17908479.447799236\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/flexible/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"flexible",
+												"cancel"
+											]
+										},
+										"description": "The response will be empty in case of a successful cancellation."
+									},
+									"response": [
+										{
+											"id": "3de325a4-7e66-4776-99bd-87f3716270f7",
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"ride_id\": -17908479.447799236\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/flexible/cancel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"flexible",
+														"cancel"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								},
+								{
+									"name": "Rides Flexible History",
+									"id": "e827fe9a-03e7-4342-920d-d7c16ba1ba1c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/flexible/history?page=-34079786.421699554&items_per_page=42669226.44519231",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"flexible",
+												"history"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "-34079786.421699554"
+												},
+												{
+													"key": "items_per_page",
+													"value": "42669226.44519231",
+													"description": "min length: 1, max length: 50\n"
+												}
+											]
+										},
+										"description": "Returns the list of all flexible rides that were not yet dispatched, or expired, sorted, ascending by the date they were created.\n\nThe response is paginated."
+									},
+									"response": [
+										{
+											"id": "e563ddbd-c753-4761-978e-0e9742f81471",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: basic",
+														"key": "Authorization",
+														"value": "Basic <credentials>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reseller/v1/rides/flexible/history?page=-34079786.421699554&items_per_page=42669226.44519231",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reseller",
+														"v1",
+														"rides",
+														"flexible",
+														"history"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "-34079786.421699554"
+														},
+														{
+															"key": "items_per_page",
+															"value": "42669226.44519231"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"flexible_rides\": [\n    {\n      \"ride_id\": -24458866.809596717,\n      \"created\": \"Lorem mollit ut sed\",\n      \"vehicle_category\": \"premium\",\n      \"state\": \"OTHER\",\n      \"user\": {\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"ready_for_dispatch_at\": \"amet\",\n      \"expires_at\": \"ut in dolore\"\n    },\n    {\n      \"ride_id\": -48016581.706879124,\n      \"created\": \"exercitation amet\",\n      \"vehicle_category\": \"marketing\",\n      \"state\": \"CANCELLED\",\n      \"user\": {\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"ready_for_dispatch_at\": \"reprehenderit id ea\",\n      \"expires_at\": \"eiusmod\"\n    }\n  ],\n  \"pagination\": {\n    \"total_items\": -12351241.67960006,\n    \"total_pages\": -80088773.0659292,\n    \"items_per_page\": -40369856.38786148,\n    \"current_page\": -65110792.6310782\n  }\n}"
+										}
+									]
+								}
+							],
+							"id": "53f0eaab-254a-4db3-a4d5-37ae7b920574"
+						},
+						{
+							"name": "Rides",
+							"id": "d3900c11-1600-4c64-8c13-96190325c42b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fare_id\": \"AAAAATAzYjc5YmQyMDUxNDRhMGFiY2FmODdmYzRlMjBlM2Q0LTczNGQyZDFiZTc5YjRjNzc5Mzk4MTVlNjE1NzhjY2NiLWJ1c2luZXNz\",\n  \"vehicle_category_id\": \"\",\n  \"user\": {\n    \"phone\": \"+525576250862\",\n    \"name\": \"Rodolfo\"\n  },\n  \"stops\": [\n       {\n            \"lat\": 35.89218484363444,\n            \"lng\": 14.457434825599194\n        },\n        {\n            \"lat\": 35.9098774,\n            \"lng\": 14.4577732\n        }\n  ],\n  \"note_to_driver\": \"\",\n  \"arrive_at_client_time\": \"2022-10-08T08:10:00.000Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								},
+								"description": "When the order is created successfully, the `ride_id` should be saved for tracking the ride later.\n\nThe stops information should be identical to the estimation query from which the `fare_id` is gathered."
+							},
+							"response": [
+								{
+									"id": "c13d22b5-fa43-4b7e-ba0b-26ac5408234f",
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fare_id\": \"aliqua cillum commodo\",\n  \"user\": {\n    \"phone\": \"exercitation incididunt Ut\",\n    \"name\": \"quis aliqua cillum proident\"\n  },\n  \"stops\": [\n    {\n      \"lat\": -13078028.592667982,\n      \"lng\": -92759356.45623825\n    },\n    {\n      \"lat\": 71123426.97053608,\n      \"lng\": -27774645.27220483\n    }\n  ],\n  \"note_to_driver\": \"consectetur dolore ex deserunt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"ride_id\": -39591541.70173913\n}"
+								},
+								{
+									"id": "fc14bda9-5535-40d4-b3f4-b72caf5aa6e4",
+									"name": "Rides",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fare_id\": \"AAAJ_DE2NTQ3MDgxMDUyMzc3MTctdmNWeU41R2Z2UjdmczJTNi1idXNpbmVzcw\",\n  \"user\": {\n    \"phone\": \"ex ea\",\n    \"name\": \"eu\"\n  },\n  \"stops\": [\n     {\n      \"lat\": 37.38421,\n      \"lng\": -5.97219\n    },\n    {\n      \"lat\": 37.37769,\n      \"lng\": -5.98263\n    }\n  ],\n  \"note_to_driver\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "raw",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 01 Jun 2022 14:02:23 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/octet-stream"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-bolt-error-code",
+											"value": "55007"
+										},
+										{
+											"key": "x-bolt-error-message",
+											"value": "RIDE_BOOKER_API_INTERNAL_ORDER_CREATION_FAILED"
+										},
+										{
+											"key": "x-bolt-tracking",
+											"value": "6bd40837d8150d29a84f5318a4ceb03e"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+										},
+										{
+											"key": "CF-Cache-Status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Expect-CT",
+											"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+										},
+										{
+											"key": "Report-To",
+											"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=eKeqyAzucxktGxsUnQPz8GTQQBd%2BzjXEfM8u9k%2FLBYsn8As7eupElHVqdfynbbrboeuDnbBtaDQXlb1FFje2J7nZOcXVnDgHX%2Fbn3pW1Y9k5Woya7BsEx%2FsULvglJwGA\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+										},
+										{
+											"key": "NEL",
+											"value": "{\"success_fraction\":0.01,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "71487c992fb79a47-MEX"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Rides Get",
+							"id": "072a48d7-c66a-4b6d-8f0a-1ef7c6858c99",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/rides?ride_id=2554340",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"rides"
+									],
+									"query": [
+										{
+											"key": "ride_id",
+											"value": "2554340",
+											"description": "(Required) The id of the ride"
+										},
+										{
+											"key": "uuid",
+											"value": "{{uuid}}",
+											"disabled": true
+										}
+									]
+								},
+								"description": "When the ride is found with the given `ride_id`, this is the response that you are going to see.\n\nDepending on the state of the ride, some information might not be available, such as ETA and vehicle information.\n\nNot intended for frequent polling."
+							},
+							"response": [
+								{
+									"id": "e2f2ee52-8c2f-4608-a9fb-c510a5ac26a8",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides?ride_id=51328934.21222687",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides"
+											],
+											"query": [
+												{
+													"key": "ride_id",
+													"value": "51328934.21222687"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"ride_id\": -92447302.4507292,\n  \"created\": \"deserunt cupidatat adipisicing Ut quis\",\n  \"stops\": [\n    {\n      \"lat\": 39023031.01079291,\n      \"lng\": -16255376.131223276\n    },\n    {\n      \"lat\": 69207045.64259413,\n      \"lng\": -97155946.83496197\n    }\n  ],\n  \"state\": \"CLIENT_DID_NOT_SHOW\",\n  \"user\": {\n    \"phone\": \"incididunt occaecat\",\n    \"name\": \"ut cillum nulla ipsum\"\n  },\n  \"start_time\": \"Excepteur\",\n  \"finish_time\": \"ea\",\n  \"eta_to_client\": 22939182.14672321,\n  \"eta_to_destination\": -23943618.358952582,\n  \"note_to_driver\": \"proident velit ipsum\",\n  \"vehicle\": {\n    \"car_reg_number\": \"veniam anim fugiat\",\n    \"car_model\": \"anim reprehenderit laborum dolore\",\n    \"car_transport_licence_number\": \"dolore sed esse mollit\",\n    \"driver_name\": \"id fugiat ut esse cillum\",\n    \"driver_phone\": \"aute\",\n    \"driver_picture\": \"esse in enim est\"\n  },\n  \"payment_method\": \"business\",\n  \"tracking_url\": \"velit esse irure sunt\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Estimations SEV",
+							"id": "5f3164ad-420b-4150-b0a9-55a2df71328c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"stops\": [\n        {\n            \"lat\": 35.89218484363444,\n            \"lng\": 14.457434825599194\n        },\n        {\n            \"lat\": 35.9098774,\n            \"lng\": 14.4577732\n        }\n    ],\n    \"payment_methods\": [\n        \"business\",\n        \"cash\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/estimations?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"estimations"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								},
+								"description": "Returns an array of estimations for different categories. One of the `fare_id` of the categories should be provided when creating the order in order for the price to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nAll the categories available for the city will be returned. The `eta` property might be null in case all the drivers of a category are busy and booking a new ride is impossible at the moment."
+							},
+							"response": [
+								{
+									"id": "acfe6eb6-3d06-455d-979e-7f4c304877c8",
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 16156204.944783866,\n      \"lng\": -37006958.71907849\n    },\n    {\n      \"lat\": -78756837.99668294,\n      \"lng\": 41633817.54110661\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/estimations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"estimations"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"estimations\": [\n    {\n      \"fare_id\": \"incididunt irure\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 61717040.18196279,\n      \"eta\": 67981463.68506345,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"fare_id\": \"ea Excepteur adipisicing\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 93821373.94244617,\n      \"eta\": 20396677.081086695,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Estimations MAD",
+							"id": "282d92f4-56e4-4f24-87c6-95300f20431b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 40.4581989,\n      \"lng\": -3.681955\n    },\n    {\n      \"lat\": 40.4202461,\n      \"lng\": -3.7048351\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/rides/estimations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"rides",
+										"estimations"
+									]
+								},
+								"description": "Returns an array of estimations for different categories. One of the `fare_id` of the categories should be provided when creating the order in order for the price to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nAll the categories available for the city will be returned. The `eta` property might be null in case all the drivers of a category are busy and booking a new ride is impossible at the moment."
+							},
+							"response": [
+								{
+									"id": "3eea7b6a-6514-4b78-8d58-e68ea1b53eb4",
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 16156204.944783866,\n      \"lng\": -37006958.71907849\n    },\n    {\n      \"lat\": -78756837.99668294,\n      \"lng\": 41633817.54110661\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/estimations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"estimations"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"estimations\": [\n    {\n      \"fare_id\": \"incididunt irure\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 61717040.18196279,\n      \"eta\": 67981463.68506345,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"fare_id\": \"ea Excepteur adipisicing\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 93821373.94244617,\n      \"eta\": 20396677.081086695,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Estimations MAL",
+							"id": "1f254d0f-3dee-446a-9851-e881823082ae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 36.72274,\n      \"lng\": -4.39886\n    },\n    {\n      \"lat\": 36.71195,\n      \"lng\": -4.43191\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/estimations?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"estimations"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								},
+								"description": "Returns an array of estimations for different categories. One of the `fare_id` of the categories should be provided when creating the order in order for the price to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nAll the categories available for the city will be returned. The `eta` property might be null in case all the drivers of a category are busy and booking a new ride is impossible at the moment."
+							},
+							"response": [
+								{
+									"id": "fbd14c84-cb94-4e05-b0bc-235a39854b34",
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 16156204.944783866,\n      \"lng\": -37006958.71907849\n    },\n    {\n      \"lat\": -78756837.99668294,\n      \"lng\": 41633817.54110661\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/estimations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"estimations"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"estimations\": [\n    {\n      \"fare_id\": \"incididunt irure\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 61717040.18196279,\n      \"eta\": 67981463.68506345,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"fare_id\": \"ea Excepteur adipisicing\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 93821373.94244617,\n      \"eta\": 20396677.081086695,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Estimations BCN",
+							"id": "ae0d765e-e8af-42fe-9e71-712b83775c6e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 41.38981,\n      \"lng\": 2.16878\n    },\n    {\n      \"lat\": 41.36666,\n      \"lng\": 2.13676\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/estimations?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"estimations"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								},
+								"description": "Returns an array of estimations for different categories. One of the `fare_id` of the categories should be provided when creating the order in order for the price to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nAll the categories available for the city will be returned. The `eta` property might be null in case all the drivers of a category are busy and booking a new ride is impossible at the moment."
+							},
+							"response": [
+								{
+									"id": "620ee8e1-4ceb-4dfb-a40a-547e99d6c8a9",
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 16156204.944783866,\n      \"lng\": -37006958.71907849\n    },\n    {\n      \"lat\": -78756837.99668294,\n      \"lng\": 41633817.54110661\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/estimations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"estimations"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"estimations\": [\n    {\n      \"fare_id\": \"incididunt irure\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 61717040.18196279,\n      \"eta\": 67981463.68506345,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"fare_id\": \"ea Excepteur adipisicing\",\n      \"vehicle_category\": \"economy\",\n      \"seats\": 93821373.94244617,\n      \"eta\": 20396677.081086695,\n      \"price\": {\n        \"amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"minimum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"maximum_amount\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currency_code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Location",
+							"id": "8bd9538b-6cef-4944-bae1-4618d6035d83",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/rides/location?ride_id=2554340",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"rides",
+										"location"
+									],
+									"query": [
+										{
+											"key": "ride_id",
+											"value": "2554340",
+											"description": "(Required) The id of the ride"
+										},
+										{
+											"key": "uuid",
+											"value": "{{uuid}}",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This is the main endpoint that needs to be polled frequently in order to keep track of the driver.\n\nIf called for a non-active ride, will return an error."
+							},
+							"response": [
+								{
+									"id": "458e2bf0-07dd-436e-a8f4-59edf49a3558",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/location?ride_id=51328934.21222687",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"location"
+											],
+											"query": [
+												{
+													"key": "ride_id",
+													"value": "51328934.21222687"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"ride_id\": 19476643.795759335,\n  \"location\": {\n    \"lat\": -58721804.70594808,\n    \"lng\": 60638209.81112561\n  },\n  \"bearing\": 45675003.18807384\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Receipt",
+							"id": "5abc05b3-6205-417b-8ebf-408fc36007bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/rides/receipt?ride_id=2946714",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"rides",
+										"receipt"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}",
+											"disabled": true
+										},
+										{
+											"key": "ride_id",
+											"value": "2946714"
+										}
+									]
+								},
+								"description": "The price breakdown for the ride is provided with this endpoint, after the ride finishes.\n\nThere might be some delay between the time the ride finishes and this information is available."
+							},
+							"response": [
+								{
+									"id": "ccc8be32-9e59-4f1d-9be5-b0d687023e43",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/receipt?ride_id=51328934.21222687",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"receipt"
+											],
+											"query": [
+												{
+													"key": "ride_id",
+													"value": "51328934.21222687"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"ride_id\": -51897007.09774403,\n  \"amount\": -22981120.505323634,\n  \"currency_code\": \"amet Ut aliquip\",\n  \"fare_breakdown\": [\n    {\n      \"type\": \"toll_road\",\n      \"amount\": -22011180.814439073\n    },\n    {\n      \"type\": \"cancellation_fee\",\n      \"amount\": 68607527.05395186\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Rides Cancel",
+							"id": "a5759d2a-f396-48b9-93ef-40859228a724",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ride_id\": 1002\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/cancel?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								},
+								"description": "The response will be empty in case of a successful deletion.\n\nDepending on when the ride is cancelled, a cancellation fee may occur."
+							},
+							"response": [
+								{
+									"id": "824aad7e-243e-4376-9260-f69fe50c3cdd",
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ride_id\": 43999194.58587909\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"cancel"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Rides History",
+							"id": "53868c5a-91cd-413c-987a-104f7c327eec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/rides/history?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"rides",
+										"history"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								},
+								"description": "Returns the list of all rides made by the API client sorted descending by the date it was created.\n\nThe response is paginated."
+							},
+							"response": [
+								{
+									"id": "ed403f61-75a3-4bae-aadd-9916374a9f6a",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reseller/v1/rides/history?page=-34079786.421699554&items_per_page=42669226.44519231",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reseller",
+												"v1",
+												"rides",
+												"history"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "-34079786.421699554"
+												},
+												{
+													"key": "items_per_page",
+													"value": "42669226.44519231"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"rides\": [\n    {\n      \"ride_id\": 98473830.72795495,\n      \"created\": \"mollit\",\n      \"state\": \"CLIENT_CANCELLED\",\n      \"user\": {\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"vehicle\": {\n        \"car_reg_number\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"car_model\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"car_transport_licence_number\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"driver_name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"driver_phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"driver_picture\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"ride_id\": -96086620.00909716,\n      \"created\": \"et fugiat ullamco ea\",\n      \"state\": \"CLIENT_CANCELLED\",\n      \"user\": {\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"vehicle\": {\n        \"car_reg_number\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"car_model\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"car_transport_licence_number\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"driver_name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"driver_phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"driver_picture\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total_items\": 63339543.276515156,\n    \"total_pages\": -37965845.672401465,\n    \"items_per_page\": -8552371.069175228,\n    \"current_page\": -89592337.39956684\n  }\n}"
+								}
+							]
+						}
+					],
+					"id": "e691c354-abed-4a4d-b255-86d1056530af"
+				},
+				{
+					"name": "Trip States",
+					"item": [
+						{
+							"name": "1 - Change state - DRIVER_ON_ROUTE_TO_CLIENT",
+							"id": "51a02bcf-c641-41b0-a697-ee8ccc02ef20",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1001,\r\n    \"ride_state\": \"DRIVER_ON_ROUTE_TO_CLIENT\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2 - Change state - ARRIVED_AT_CLIENT",
+							"id": "a9d4b71a-902c-4cc4-9979-9ad3a5142342",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1001,\r\n    \"ride_state\": \"ARRIVED_AT_CLIENT\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3 - Change state - DRIVING_WITH_CLIENT",
+							"id": "922cd7ef-d8af-4bcf-9d23-34101d9118da",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1001,\r\n    \"ride_state\": \"DRIVING_WITH_CLIENT\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4 - Change state - COMPLETED",
+							"id": "60bf1406-7fce-4cde-a85f-f0c1258e5e22",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1001,\r\n    \"ride_state\": \"COMPLETED\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5 - Change state - NO_DRIVER_FOUND",
+							"id": "36dada16-0924-40ba-98c3-fdaef3928f3d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1003,\r\n    \"ride_state\": \"NO_DRIVER_FOUND\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6 - Change state - DRIVER CANCELLED",
+							"id": "06b18be5-7e40-4051-9eb4-951d3cb8d0ed",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1003,\r\n    \"ride_state\": \"CANCELLED\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7 - Change state - SEARCHING",
+							"id": "74b9250e-9ba3-46c6-af7f-aeb70724ff85",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1003,\r\n    \"ride_state\": \"SEARCHING\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "8 - Change state - CLIENT DID NOT SHOW",
+							"id": "babaa36a-7ba3-4b76-a6ba-7861e96d66e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ride_id\": 1003,\r\n    \"ride_state\": \"CLIENT_DID_NOT_SHOW\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides/control/state?uuid={{uuid}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v1",
+										"sandbox",
+										"rides",
+										"control",
+										"state"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "{{uuid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "bc12a14e-64bc-414d-91a7-c68f47a1b94c"
+				},
+				{
+					"name": "Rides Estimations",
+					"id": "29a2ec5e-4ac5-4559-a9f8-980256b982fb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stops\": [\n    {\n      \"lat\": 34053480.35335876,\n      \"lng\": -39236686.88104125\n    },\n    {\n      \"lat\": 49080769.734868914,\n      \"lng\": -77838328.98901837\n    }\n  ],\n  \"payment_methods\": [\n    \"business\",\n    \"cash\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reseller/v2/rides/estimations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reseller",
+								"v2",
+								"rides",
+								"estimations"
+							]
+						},
+						"description": "Returns an array of estimations per category x payment method. One of the `fare_id` of the categories should be provided when creating the order in order for the price and payment method to be fixed before the ride.\n\nThe request needs to contain at least 2 stops, and can contain up to 4. The first stop is going to be used as the pickup point, and the last as the destination.\n\nThe payment methods that needs to be provided request is an array, which can contain \"business\", \"cash\" or \"card\". The returned estimations will be per the provided payment methods.\n\nAll the categories available for the city will be returned. The `eta` property might be null in case all the drivers of a category are busy and booking a new ride is impossible at the moment."
+					},
+					"response": [
+						{
+							"id": "316ba036-c5cc-4bc4-afdc-53c7fff698e4",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"stops\": [\n    {\n      \"lat\": -39560632.31457305,\n      \"lng\": -45341606.81934467\n    },\n    {\n      \"lat\": 15153540.125878572,\n      \"lng\": -75432856.09220845\n    }\n  ],\n  \"payment_methods\": [\n    \"business\",\n    \"business\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reseller/v2/rides/estimations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reseller",
+										"v2",
+										"rides",
+										"estimations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"categories\": [\n    {\n      \"vehicle_category\": \"isolated\",\n      \"seats\": -70724172.11311501,\n      \"estimations\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"vehicle_category\": \"wav\",\n      \"seats\": 8278934.598461658,\n      \"estimations\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "f24bd7d1-3b09-4f88-9102-7ad8a9228e3b"
+		},
+		{
+			"name": "https://node.taxify.eu/ride-booker-api/reseller/v1/rides/estimations",
+			"id": "a8041c38-7778-43d4-9846-1778edb467a0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Dvb9v0KRqg9S3TZHjqHPM243iOJZIkz_p-8DuXTgfhf",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stops\": [\r\n        {\r\n            \"lat\": 37.41335989048996,\r\n            \"lng\": -5.978337451815605\r\n        },\r\n        {\r\n            \"lat\": 37.3890439,\r\n            \"lng\": -5.994852600000001\r\n        }\r\n    ],\r\n    \"payment_methods\": [\r\n        \"business\",\r\n        \"cash\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://node.taxify.eu/ride-booker-api/reseller/v1/rides/estimations",
+					"protocol": "https",
+					"host": [
+						"node",
+						"taxify",
+						"eu"
+					],
+					"path": [
+						"ride-booker-api",
+						"reseller",
+						"v1",
+						"rides",
+						"estimations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate uuid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"uuid\", jsonData.uuid);\r",
+							""
+						],
+						"type": "text/javascript",
+						"id": "58acbccc-2eb5-4ad3-8679-32b2d6417f6e"
+					}
+				}
+			],
+			"id": "d9bd894c-f270-4107-a9bd-30a05c820b1a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/reseller/v1/sandbox/control/create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reseller",
+						"v1",
+						"sandbox",
+						"control",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete uuid",
+			"id": "ef8a5cb0-c792-489e-ad22-6e9ec59223b1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uuid\": \"{{uuid}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://node.bolt.eu/ride-booker-api-sandbox/reseller/v1/sandbox/control/destroy",
+					"protocol": "https",
+					"host": [
+						"node",
+						"bolt",
+						"eu"
+					],
+					"path": [
+						"ride-booker-api-sandbox",
+						"reseller",
+						"v1",
+						"sandbox",
+						"control",
+						"destroy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "https://oidc.bolt.eu/token",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "wpiGVbMNkumsDcdeAoWeM3rscGeVMy3Q8DiNGZlt2uOdyQdG1k7YnXx-nOY4dEwpbU7UO4jg62yCl_dt7nze1w",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "CmVrC25tAfDBXUWFmkIWM",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "ridebooker:api",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "Bolt VTC",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9ca2c7b5-b9da-401a-9b09-7a0142054e68",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4a2323b2-5ad3-4051-bc3a-f9ab0895526c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2c18a23b-788a-44e4-b6df-67dcd14a9b43",
+			"key": "baseUrl",
+			"value": "https://node.taxify.eu/ride-booker-api-sandbox"
+		},
+		{
+			"id": "6d1f4fdd-3366-4e75-a044-c5d94d122abf",
+			"key": "uuid",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

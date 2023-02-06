@@ -5,8 +5,8 @@ id = 7ea8b6f6-08c7-4701-be7d-67aa7e955765
 
 [relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"17396120-38a40f36-fa6a-48f4-88c8-831eb87a02e0","path":"New Collection(1).json","metaData":{}}
-files[] = {"id":"17396120-8d3af79b-7ab2-4d97-bb3e-4455105c3277","path":"New Collection.json","metaData":{}}
+files[] = {"id":"17396120-b45d83ed-9631-4d5b-a7b5-69725176fe64","path":"Bolt VTC PRO.json","metaData":{}}
+files[] = {"id":"17396120-08ce137b-3fdc-4482-9a77-fd52270909b5","path":"Bolt VTC Sanbox Test App.json","metaData":{}}
 
 [relations.collections.metaData]
 

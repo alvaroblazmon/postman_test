@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "08ce137b-3fdc-4482-9a77-fd52270909b5",
+		"_postman_id": "3f857550-89fc-48c5-9b3a-075c7b99b09a",
 		"name": "Bolt VTC Sanbox Test App",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "17396120-08ce137b-3fdc-4482-9a77-fd52270909b5"
+		"_uid": "23102572-3f857550-89fc-48c5-9b3a-075c7b99b09a"
 	},
 	"item": [
 		{
@@ -14,7 +14,7 @@
 					"item": [
 						{
 							"name": "Rides Get",
-							"id": "4ff23bef-c755-4c80-9cc6-a71b972f6560",
+							"id": "5fc3f0e8-e2bf-4f94-9f41-dd5b57d2f30e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -27,7 +27,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides?ride_id=1001&uuid={{uuid}}",
+									"raw": "{{baseUrl}}/reseller/v1/sandbox/rides?ride_id=1002&uuid={{uuid}}",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -40,7 +40,7 @@
 									"query": [
 										{
 											"key": "ride_id",
-											"value": "1001",
+											"value": "1002",
 											"description": "(Required) The id of the ride"
 										},
 										{
@@ -53,7 +53,7 @@
 							},
 							"response": [
 								{
-									"id": "cecd955f-c35f-4b6d-ae14-eb5413ad10d2",
+									"id": "001b37ec-8464-4a00-9907-c3fe288e10f1",
 									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
@@ -98,7 +98,7 @@
 						},
 						{
 							"name": "Rides Location",
-							"id": "bad169f6-c21f-44bb-aa74-c160ff28a8e1",
+							"id": "933e533c-93dd-44b1-8af9-f23ce6ded7eb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -138,7 +138,7 @@
 							},
 							"response": [
 								{
-									"id": "082535cd-038b-44bc-ad6b-a075d827a63a",
+									"id": "52332fec-7445-4182-a685-57829bf8383b",
 									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
@@ -184,7 +184,7 @@
 						},
 						{
 							"name": "Rides Receipt",
-							"id": "b7d85161-73be-4173-abfe-c39ccdaf8ebf",
+							"id": "e1b38bbb-152d-4c09-9324-0dfb17b2a4ab",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -224,7 +224,7 @@
 							},
 							"response": [
 								{
-									"id": "da9a87eb-3e53-47dc-b9f3-d67145fa448e",
+									"id": "e7d80b6a-cd26-4f4f-af61-52f4768416ee",
 									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
@@ -270,7 +270,7 @@
 						},
 						{
 							"name": "Rides History",
-							"id": "a36b2bc0-392f-4833-862f-c02835328bef",
+							"id": "48b09530-3a3e-443c-b051-db09323c559f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -304,7 +304,7 @@
 							},
 							"response": [
 								{
-									"id": "96183f6a-6e33-4a5f-ac70-46ff18d153e1",
+									"id": "42611c5f-4957-4efa-9eeb-e2ea91bbc879",
 									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
@@ -353,14 +353,14 @@
 							]
 						}
 					],
-					"id": "54394be4-7728-481f-bb52-db9adb586ad6"
+					"id": "a193b06d-c8f5-4f26-984e-7fa7994a10f9"
 				},
 				{
 					"name": "Trip States",
 					"item": [
 						{
 							"name": "1 - Change state - DRIVER_ON_ROUTE_TO_CLIENT",
-							"id": "0c4de0cf-4879-49e9-b30a-19b064ef64e0",
+							"id": "89c53b85-9cf4-49c3-b749-5e7dccfc63c0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -401,7 +401,7 @@
 						},
 						{
 							"name": "2 - Change state - ARRIVED_AT_CLIENT",
-							"id": "7cd6f858-2b5c-4cb3-bf13-8d7250eb36b5",
+							"id": "ca870c28-834f-411a-95be-9963a49bb2ce",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -442,7 +442,7 @@
 						},
 						{
 							"name": "3 - Change state - DRIVING_WITH_CLIENT",
-							"id": "90fcce2d-bad7-4b99-881f-9088fb11dd62",
+							"id": "fe1ccc23-a88b-4ae8-b344-c651928f52bb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -483,7 +483,7 @@
 						},
 						{
 							"name": "4 - Change state - COMPLETED",
-							"id": "09134fa5-2321-41d3-bacd-b05fe5db7ba4",
+							"id": "df6661b6-b9ea-47c7-9980-4bfeb125b22f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -524,7 +524,7 @@
 						},
 						{
 							"name": "5 - Change state - NO_DRIVER_FOUND",
-							"id": "3ee82b62-aa6b-4e1f-83ed-ef5f469ef78c",
+							"id": "55fd12d9-fd20-42e9-b566-2854da7b80ff",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -565,7 +565,7 @@
 						},
 						{
 							"name": "6 - Change state - DRIVER CANCELLED",
-							"id": "748690a1-bcb1-42d3-8459-cd3ff10af6da",
+							"id": "f7c0f4d6-47b1-4f30-8a72-469811553c9d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -606,7 +606,7 @@
 						},
 						{
 							"name": "7 - Change state - SEARCHING",
-							"id": "c828f98d-8246-4030-8036-250cdc6c801d",
+							"id": "3a540723-c4f2-438c-bfa3-9e9dcab87192",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -647,7 +647,7 @@
 						},
 						{
 							"name": "8 - Change state - CLIENT DID NOT SHOW",
-							"id": "6e8e1c72-e7bd-4ef6-b377-70c4276572bb",
+							"id": "eb46913d-7eeb-49f6-836b-4f1c19b1e429",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -688,7 +688,7 @@
 						},
 						{
 							"name": "9 - Change state - CLIENT CANCELLED",
-							"id": "45894a45-cb60-4710-8198-f1f4fd02f9d6",
+							"id": "09252986-ba22-4dc2-a7a6-a2779bd21236",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -728,10 +728,10 @@
 							"response": []
 						}
 					],
-					"id": "fe0966cf-cd30-4a51-b5d9-a6e6593bd6ff"
+					"id": "0da60241-36a4-40e1-b788-4fe32b3235e3"
 				}
 			],
-			"id": "334e70e9-285a-4909-b17b-72460bc2091a"
+			"id": "af540018-1e08-4633-8026-81f744b48365"
 		}
 	],
 	"auth": {
@@ -788,7 +788,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ebb43205-fe75-4e54-b81b-1eb5e5623c46",
+				"id": "94e4a0ae-fc75-4d66-86f1-fdebe54efdf0",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -798,7 +798,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b135f065-2cb6-45cd-a71d-56e482f4df1d",
+				"id": "a9a7b861-302c-40ea-8d81-4257b3cedeb7",
 				"type": "text/javascript",
 				"exec": [
 					""
